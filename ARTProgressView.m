@@ -27,7 +27,7 @@ float const kLabelProgressSpace = 2.0;
         lblValue.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.2];
         lblValue.shadowOffset = CGSizeMake(1.0, 1.0);
         lblValue.text = @""; // default value
-        _valueUnit = @""; // default suffix
+        _valueTag = @""; // default suffix
 
         [self addObserver:self forKeyPath:@"progress" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
     
@@ -66,7 +66,7 @@ float const kLabelProgressSpace = 2.0;
             lblValue.frame = CGRectMake(progress * CGRectGetWidth(self.frame) - CGRectGetWidth(lblValue.frame), CGRectGetMinY(lblValue.frame), CGRectGetWidth(lblValue.frame) , CGRectGetHeight(lblValue.frame));
     }
     
-    lblValue.text = [NSString stringWithFormat:@"%.1f %@", progress  * [maxValue floatValue], _valueUnit];
+    lblValue.text = [NSString stringWithFormat:@"%.1f %@", progress  * [maxValue floatValue], _valueTag];
     [lblValue sizeToFit];
 }
 
@@ -91,7 +91,7 @@ float const kLabelProgressSpace = 2.0;
 - (void)setMaxValue:(NSNumber *)aMaxValue {
     
     maxValue = aMaxValue;
-    lblValue.text = [NSString stringWithFormat:@"%.1f %@", [aMaxValue floatValue], _valueUnit];
+    lblValue.text = [NSString stringWithFormat:@"%.1f %@", [aMaxValue floatValue], _valueTag];
     [lblValue sizeToFit];
     
     [self LabelSizingPositioning];
@@ -101,7 +101,7 @@ float const kLabelProgressSpace = 2.0;
 
 - (void)reset
 {
-    lblValue.text = [NSString stringWithFormat:@"%.1f %@", [maxValue floatValue], _valueUnit];
+    lblValue.text = [NSString stringWithFormat:@"%.1f %@", [maxValue floatValue], _valueTag];
     [lblValue sizeToFit];
     
     [self LabelSizingPositioning];

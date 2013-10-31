@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, ARTFontSize) {
 }
 
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *valueUnit;
+@property (nonatomic, copy) NSString *valueTag;
 @property (nonatomic) NSNumber *maxValue;
 @property (nonatomic) UIFont *font;
 
