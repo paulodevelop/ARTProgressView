@@ -1,7 +1,7 @@
 ARTProgressView
 ---------
 
-**ARTProgressView** is a UIProgressView with labels. One for title, and one for tagging progress values... and that's it!
+**ARTProgressView** is a UIProgressView with labels. One for title, and one for tagging progress values. This one moving along with the progress bar... and that's it!
 
 #### <i class="icon-file"></i> How to use it
 
