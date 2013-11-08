@@ -5,4 +5,4 @@ ARTProgressView
 
 #### <i class="icon-file"></i> How to use it
 
-Like any other class.
+Like any other class, but try out the [demo app](https://github.com/user/repo/blob/branch/other_file.md) and see it rocking!
